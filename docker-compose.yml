@@ -1,0 +1,34 @@
+services:
+
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: budgetmaster
+      DB_USER: budgetmaster
+      DB_PASS: budgetmaster
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: budgetmaster
+      MYSQL_USER: budgetmaster
+      MYSQL_PASSWORD: budgetmaster
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/budgetmaster.sql:/docker-entrypoint-initdb.d/budgetmaster.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+
+volumes:
+  db_data:

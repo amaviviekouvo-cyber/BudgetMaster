@@ -1,0 +1,344 @@
+/* ===========================
+   BUDGETMASTER - PAGE D'ACCUEIL
+=========================== */
+
+*{
+
+font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#F5F7FF;
+
+overflow-x:hidden;
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+background:rgba(15,15,25,.85)!important;
+
+backdrop-filter:blur(15px);
+
+position:fixed;
+
+width:100%;
+
+top:0;
+
+left:0;
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#FF5FA2 !important;
+
+}
+
+.nav-link{
+
+font-weight:500;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+min-height:100vh;
+
+padding:120px 0 80px;
+
+display:flex;
+
+align-items:center;
+
+background:
+linear-gradient(
+    rgba(194,180,188,.65),
+    rgba(169,161,169,.65)
+),
+url("../images/background.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+}
+
+.hero h1{
+
+font-size:clamp(40px,6vw,72px);
+
+line-height:1.15;
+
+font-weight:800;
+
+color:#0d0d01;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:#d4407e;
+
+}
+
+.hero p{
+
+font-size:clamp(17px,2vw,22px);
+
+margin-bottom:40px;
+
+color:#0a090a;
+
+}
+
+/* ================= BOUTONS ================= */
+
+.btn{
+
+padding:16px 36px;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.4s;
+
+box-shadow:0 10px 25px rgba(119,7,7,.12);
+
+margin:0 10px 10px 0;
+
+}
+
+.btn-sm{
+
+padding:8px 20px;
+
+font-size:15px;
+
+margin:0;
+
+}
+
+.btn-pink{
+
+background:#FF5FA2;
+
+color:white;
+
+}
+
+.btn-pink:hover{
+
+background:#e0437f;
+
+color:white;
+
+transform:translateY(-4px);
+
+}
+
+.btn-blue{
+
+background:#5B8DEF;
+
+color:white;
+
+}
+
+.btn-blue:hover{
+
+background:#4374d6;
+
+color:white;
+
+transform:translateY(-4px);
+
+}
+
+/* ================= PHOTO ================= */
+
+.hero-card{
+
+display:inline-block;
+
+padding:30px 40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+.vivi-photo{
+
+width:200px;
+
+height:200px;
+
+margin:auto;
+
+border-radius:50%;
+
+background-image:url("../images/vivi.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+border:6px solid #FFD1E5;
+
+box-shadow:0 20px 40px rgba(212,64,126,.25);
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* ================= FONCTIONNALITÉS ================= */
+
+.features{
+
+padding:100px 0;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:clamp(28px,4vw,42px);
+
+font-weight:700;
+
+}
+
+.section-subtitle{
+
+text-align:center;
+
+color:#6B7280;
+
+font-size:18px;
+
+}
+
+.feature-card{
+
+height:100%;
+
+padding:35px 25px;
+
+text-align:center;
+
+background:white;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(255,95,162,.18);
+
+}
+
+.feature-card i{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+background:linear-gradient(135deg,#FF5FA2,#7A6CFF);
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+color:transparent;
+
+}
+
+.feature-card h3{
+
+font-size:22px;
+
+font-weight:600;
+
+}
+
+.feature-card p{
+
+color:#6B7280;
+
+margin:0;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+padding:30px 20px;
+
+text-align:center;
+
+background:linear-gradient(90deg,#FF5FA2,#7A6CFF);
+
+color:white;
+
+font-size:16px;
+
+}
