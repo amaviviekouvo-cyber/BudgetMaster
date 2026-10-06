@@ -1,0 +1,8 @@
+# Environnement local
+.env
+.vscode/
+.idea/
+
+# Systeme
+.DS_Store
+Thumbs.db

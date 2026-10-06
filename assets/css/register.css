@@ -1,0 +1,177 @@
+/* ============================= */
+/* BudgetMaster - Register Page  */
+/* Designed by EKOUVO Vivi 💖    */
+/* ============================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#FFD7EB,#E5ECFF);
+
+}
+
+.container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+}
+
+.register-box{
+
+    width:500px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.register-box h1{
+
+    color:#FF5FA2;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:40px;
+
+}
+
+.register-box h2{
+
+    text-align:center;
+
+    color:#444;
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border-radius:15px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+input:focus,
+select:focus{
+
+    border-color:#FF5FA2;
+
+    box-shadow:0 0 12px rgba(255,95,162,.25);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#FF5FA2,#6E8CFF);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 25px rgba(255,95,162,.35);
+
+}
+
+.login{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.login a{
+
+    color:#FF5FA2;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.alert{
+
+    margin-bottom:20px;
+
+}
+
+footer{
+
+    position:fixed;
+
+    bottom:15px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+}
