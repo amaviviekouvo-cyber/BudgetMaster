@@ -46,8 +46,8 @@ BudgetMaster/
 ├── statistics/      Graphiques
 ├── notifications/   settings/
 ├── includes/        bootstrap.php (session + BDD), functions.php, gabarits (header, sidebar, navbar, footer)
-├── config/          database.php (configurable par variables d'environnement)
-├── database/        budgetmaster.sql (schéma complet)
+├── config/          database.php (variables d'environnement ou database.local.php)
+├── database/        budgetmaster.sql (schéma complet), budgetmaster_hosting.sql (hébergement mutualisé)
 ├── assets/          CSS, JS, images
 ├── Dockerfile       Image PHP 8.2 + Apache
 └── docker-compose.yml
@@ -85,7 +85,30 @@ L'application lit sa configuration dans les variables d'environnement suivantes 
 | `DB_USER` | `root` |
 | `DB_PASS` | *(vide)* |
 
-Elle peut donc être déployée sur tout hébergeur acceptant un `Dockerfile` (Railway, Render, Fly.io…) avec une base MySQL, ou sur un hébergement PHP mutualisé (en important `database/budgetmaster.sql` et en renseignant les variables ci-dessus).
+Elle peut donc être déployée sur tout hébergeur acceptant un `Dockerfile` (Railway, Render, Fly.io…) avec une base MySQL.
+
+### Hébergement mutualisé gratuit (InfinityFree)
+
+Les hébergeurs mutualisés ne permettent pas de définir des variables d'environnement : la configuration est alors lue dans `config/database.local.php` (fichier **non versionné**, les identifiants ne partent donc jamais sur GitHub).
+
+1. Dans le panneau [InfinityFree](https://dash.infinityfree.com/accounts), créer une base MySQL `budgetmaster` et noter l'hôte, le nom de la base, l'utilisateur et le mot de passe.
+2. Ouvrir **phpMyAdmin** et importer `database/budgetmaster_hosting.sql` (même schéma que `budgetmaster.sql`, sans `CREATE DATABASE` que l'hébergeur refuse).
+3. Dans le **File Manager**, envoyer les fichiers du projet dans `htdocs/` (une archive zip peut être envoyée puis extraite).
+4. Renommer `config/database.local.example.php` en `config/database.local.php` et y renseigner les identifiants MySQL :
+   ```php
+   return [
+       "DB_HOST" => "sqlXXX.infinityfree.com",
+       "DB_PORT" => "3306",
+       "DB_NAME" => "if0_XXXXXXXX_budgetmaster",
+       "DB_USER" => "if0_XXXXXXXX",
+       "DB_PASS" => "mot_de_passe_mysql",
+   ];
+   ```
+5. Ouvrir l'adresse du site (`https://<nom>.infinityfreeapp.com`) et créer un compte.
+
+## 🎨 Design
+
+Interface aux couleurs vives : dégradés rose → violet pour la navigation, fonds en dégradé rose / pêche / bleu ciel, et un mode sombre violet profond plutôt que gris.
 
 ## 📚 Ce que ce projet m'a permis d'apprendre
 
