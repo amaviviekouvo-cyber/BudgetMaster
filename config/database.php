@@ -6,6 +6,17 @@
  * (utile en production / Docker). Par défaut : configuration XAMPP locale.
  */
 
+/* Hébergement mutualisé (ex. InfinityFree) : pas de variables d'environnement,
+   on lit alors config/database.local.php (non versionné) s'il existe. */
+
+$local = is_file(__DIR__ . "/database.local.php") ? require __DIR__ . "/database.local.php" : [];
+
+foreach ($local as $key => $value) {
+    if (getenv($key) === false) {
+        putenv("$key=$value");
+    }
+}
+
 $host = getenv("DB_HOST") ?: "localhost";
 $port = getenv("DB_PORT") ?: "3306";
 $dbname = getenv("DB_NAME") ?: "budgetmaster";

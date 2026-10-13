@@ -10,7 +10,8 @@
 }
 
 body{
-    background:#F5F7FF;
+    background:linear-gradient(135deg,#FFF0F7 0%,#FFF7E8 45%,#EAF4FF 100%);
+    background-attachment:fixed;
     display:flex;
 }
 
@@ -591,7 +592,8 @@ canvas{
 
 body.dark-mode{
 
-    background:#111827;
+    background:linear-gradient(135deg,#3B1E6E 0%,#5B2A86 50%,#2B4C9B 100%);
+    background-attachment:fixed;
 
     color:white;
 
@@ -599,13 +601,14 @@ body.dark-mode{
 
 body.dark-mode .content{
 
-    background:#111827;
+    background:transparent;
 
 }
 
 body.dark-mode .card{
 
-    background:#1F2937;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
 
     color:white;
 
@@ -619,7 +622,7 @@ body.dark-mode .table{
 
 body.dark-mode .table th{
 
-    background:#374151;
+    background:rgba(255,95,162,.35);
 
     color:white;
 
@@ -629,7 +632,7 @@ body.dark-mode .table td{
 
     color:white;
 
-    border-color:#374151;
+    border-color:rgba(255,255,255,.18);
 
 }
 
@@ -637,19 +640,19 @@ body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea{
 
-    background:#374151;
+    background:rgba(255,255,255,.15);
 
     color:white;
 
-    border:1px solid #4B5563;
+    border:1px solid rgba(255,255,255,.3);
 
 }
 
 body.dark-mode .footer{
 
-    background:#1F2937;
+    background:rgba(255,255,255,.10);
 
-    border-color:#374151;
+    border-color:rgba(255,255,255,.18);
 
     color:#D1D5DB;
 
@@ -901,5 +904,24 @@ body.dark-mode label{
 .dashboard-link{
 
     text-decoration:none;
+
+}
+
+/* Titres lisibles sur le fond violet du mode sombre */
+
+body.dark-mode .topbar-left h2,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5{
+
+    color:white;
+
+}
+
+body.dark-mode .topbar-left p{
+
+    color:#E9D5FF;
 
 }

@@ -16,7 +16,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:#F5F7FF;
+background:linear-gradient(135deg,#FFF0F7 0%,#FFF7E8 50%,#EEF3FF 100%);
 
 overflow-x:hidden;
 
@@ -26,7 +26,7 @@ overflow-x:hidden;
 
 .navbar{
 
-background:rgba(15,15,25,.85)!important;
+background:linear-gradient(90deg,rgba(255,95,162,.92),rgba(122,108,255,.92))!important;
 
 backdrop-filter:blur(15px);
 
@@ -48,7 +48,7 @@ font-size:28px;
 
 font-weight:700;
 
-color:#FF5FA2 !important;
+color:#FFFFFF !important;
 
 }
 
@@ -72,8 +72,8 @@ align-items:center;
 
 background:
 linear-gradient(
-    rgba(194,180,188,.65),
-    rgba(169,161,169,.65)
+    rgba(255,214,232,.35),
+    rgba(255,236,210,.30)
 ),
 url("../images/background.png");
 

@@ -6,3 +6,9 @@
 # Systeme
 .DS_Store
 Thumbs.db
+
+# Configuration BDD de production
+config/database.local.php
+
+# Archive d'hébergement
+budgetmaster-hebergement.zip
